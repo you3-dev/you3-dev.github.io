@@ -16,6 +16,7 @@ const Layout: FunctionComponent<Props> = ({ children }: Props) => (
     <p css={pStyle}>
       No registration or installs! Just create a room and share the link.
     </p>
+    {/*
     <a
       css={logoStyle}
       href="https://webrtc.ecl.ntt.com/"
@@ -24,6 +25,7 @@ const Layout: FunctionComponent<Props> = ({ children }: Props) => (
     >
       <img src="./images/logo.svg" alt="SkyWay" />
     </a>
+    */}
   </div>
 );
 
