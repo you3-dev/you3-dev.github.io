@@ -13,10 +13,10 @@ const Layout: FunctionComponent<Props> = ({ children }: Props) => (
 
     <div css={contentStyle}>{children}</div>
 
+    {/*
     <p css={pStyle}>
       No registration or installs! Just create a room and share the link.
     </p>
-    {/*
     <a
       css={logoStyle}
       href="https://webrtc.ecl.ntt.com/"
