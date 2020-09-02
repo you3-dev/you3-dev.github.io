@@ -3,5 +3,6 @@ Deny from all
 </Files>
 AuthType Basic
 AuthUserFile /home/you3-dev/you3-dev.github.io/docs/.htpasswd
+AuthGroupFile /dev/null
 AuthName "Please enter your ID and password"
 Require valid-user
