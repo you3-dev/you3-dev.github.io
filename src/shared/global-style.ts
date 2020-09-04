@@ -29,7 +29,7 @@ export const globalStyle = css({
     fontWeight: "lighter",
     lineHeight: 1.5,
     height: "100vh",
-    background: `linear-gradient(45deg, ${globalColors.lightblue}, ${globalColors.blue})`,
+    //background: `linear-gradient(45deg, ${globalColors.lightblue}, ${globalColors.blue})`,
   },
   "#app-root": {
     height: "100vh",
