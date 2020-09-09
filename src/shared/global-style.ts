@@ -9,6 +9,7 @@ export const globalColors = {
   gray: "#eee",
   white: "#fff",
   black: "#111",
+  darkgray: "#aaa",
 };
 
 export const animation = {
@@ -29,7 +30,7 @@ export const globalStyle = css({
     fontWeight: "lighter",
     lineHeight: 1.5,
     height: "100vh",
-    //background: `linear-gradient(45deg, ${globalColors.lightblue}, ${globalColors.blue})`,
+    background: `linear-gradient(45deg, ${globalColors.gray}, ${globalColors.darkgray})`,
   },
   "#app-root": {
     height: "100vh",
