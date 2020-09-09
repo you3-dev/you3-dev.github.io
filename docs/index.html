@@ -7,6 +7,18 @@
   <title>SkyWay Conference</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap">
+  <script>
+    function makeRoomId() {
+      let l = 16;
+      let c = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      let cl = c.length;
+      var r = "";
+      for (var i = 0; i < l; i++) {
+        r += c[Math.floor(Math.random() * cl)];
+      }
+      return r;
+    }
+  </script>
 </head>
 <body>
   <!--
@@ -14,5 +26,23 @@
   <script src="./vendor.bundle.js"></script>
   <script src="./index.bundle.js"></script>
   -->
+
+  <div style="background-color: #fff; border: 1px solid #ccc; padding: 16; border-radius: 2">
+    <div style="display: grid; align-items: center; grid-template-columns: 1fr; height: 40; margin-Bottom: 4">
+      <div>ROOM-URL(下記URLを相手に連絡してください)</div>
+      <div id="roomurl"></div>
+      <div>
+        <button type="button" onclick="gotoRoom()">部屋を作成</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    var mydiv = document.getElementById("roomurl");
+    mydiv.innerHTML = location.protocol + "//" + location.host + "/conf.html#!/mesh/" + makeRoomId();
+
+    function gotoRoom() {
+      window.open(mydiv.innerHTML, 'room');
+    }
+  </script>
 </body>
 </html>

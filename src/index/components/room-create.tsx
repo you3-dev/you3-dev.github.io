@@ -15,7 +15,7 @@ interface Props {
 }
 const RoomCreate: FunctionComponent<Props> = (props) => {
   const [roomId, setRoomId] = useState("");
-  const [roomType, setRoomType] = useState("sfu");
+  const [roomType, setRoomType] = useState("mesh");
   const [isRoomIdValid, setRoomIdValid] = useState(true);
 
   return (
@@ -44,13 +44,14 @@ const RoomCreate: FunctionComponent<Props> = (props) => {
         {isRoomIdValid ? "" : "half width, 4~16 characters are required!"}
       </span>
 
+      {/*
       <div css={itemStyle}>
         <div>ROOM TYPE</div>
         <div>
           {["sfu", "mesh"].map((type) => (
             <label key={type} css={roomTypeStyle}>
               <input
-                type="radio"
+                type="hidden"
                 onChange={() => setRoomType(type)}
                 value={roomType}
                 checked={roomType === type}
@@ -61,6 +62,12 @@ const RoomCreate: FunctionComponent<Props> = (props) => {
           ))}
         </div>
       </div>
+      */}
+      <input
+        type="hidden"
+        value={roomType}
+        name="room-type"
+      />
 
       <div css={buttonWrapStyle}>
         <button
